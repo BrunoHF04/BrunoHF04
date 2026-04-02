@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 72" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="readmeWave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="45%" stop-color="#a371f7"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#readmeWave)" fill-opacity="0.22" d="M0 36 Q320 4 640 32 T1200 22 V72 H0Z"/>
+  <path stroke="#58a6ff" stroke-width="1.75" stroke-opacity="0.55" d="M0 30 Q420 6 840 34 T1200 26"/>
+</svg>

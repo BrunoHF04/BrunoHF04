@@ -14,6 +14,8 @@
 
 ![Visitas ao perfil](https://komarev.com/ghpvc/?username=BrunoHF04&label=Visitas+ao+perfil&color=58a6ff&style=for-the-badge&labelColor=1a1b27)
 
+<img src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/readme-wave.svg" width="100%" height="48" alt="" />
+
 </div>
 
 ---
@@ -26,6 +28,23 @@
 - [Portfólio completo](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)  
 
 </details>
+
+---
+
+## Repositórios no GitHub
+
+Dica: **fixa até 6 repositórios** em [github.com/BrunoHF04](https://github.com/BrunoHF04) (*Pinned*) — ficam logo abaixo do README e chamam mais atenção que só links no texto.
+
+<div align="center">
+
+| Repositório | Sobre |
+|:--|:--|
+| [**Portfolio-Bruno_Fernandes**](https://github.com/BrunoHF04/Portfolio-Bruno_Fernandes) · [![estrelas](https://img.shields.io/github/stars/BrunoHF04/Portfolio-Bruno_Fernandes?style=flat-square&logo=github&logoColor=white&label=&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04/Portfolio-Bruno_Fernandes) | Site do portfólio (GitHub Pages) |
+| [**Clothing_System**](https://github.com/BrunoHF04/Clothing_System) · [![estrelas](https://img.shields.io/github/stars/BrunoHF04/Clothing_System?style=flat-square&logo=github&logoColor=white&label=&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04/Clothing_System) | Projeto de sistema (código no GitHub) |
+
+[**Ver todos os repositórios →**](https://github.com/BrunoHF04?tab=repositories&q=&sort=updated)
+
+</div>
 
 ---
 
@@ -101,6 +120,17 @@ flowchart LR
 | **Racionamento inteligente** | Hardware · Arduino · premiação CONIC-SEMESP | [Portfólio](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/) |
 
 > Todos os detalhes, depoimentos e formação estão no site: **[brunohf04.github.io/Portfolio-Bruno_Fernandes](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)**
+
+<details>
+<summary><strong>Depoimentos</strong> (do portfólio)</summary>
+
+> *“Excelente liderança técnica. Conseguimos otimizar nossas implantações em 40% após as automações sugeridas pelo Bruno.”*  
+> **Amanda Costa** — Coordenadora de TI, Sperta Moto
+
+> *“Profissional extremamente dedicado e com uma visão técnica invejável. A forma como ele aplica IA nos processos é impressionante.”*  
+> **Ricardo Silva** — Gerente de Operações, Siplan
+
+</details>
 
 ---
 
