@@ -1,5 +1,4 @@
-# Gera animação a partir do calendário público de contribuições (API GitHub).
-# GIF no README evita erro de "Encoding" no Firefox com SVG raw; SVG fica como extra.
+# Gera SVG claro + escuro (svg-only, sem Docker). v3 exige GITHUB_TOKEN para a API do calendário.
 name: Generate snake animation
 
 on:
@@ -18,26 +17,29 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
-      # v3.x precisa de GITHUB_TOKEN para a API do calendário
-      - name: Generate GIF + SVG (Docker)
-        uses: Platane/snk@v3
+      - name: Generate SVGs
+        uses: Platane/snk/svg-only@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           github_user_name: ${{ github.repository_owner }}
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Declaração XML nos SVG (melhor compatibilidade com leitores strict)
+      - name: Declaração XML UTF-8 (Firefox / leitores XML strict)
         run: |
           python3 << 'PY'
           from pathlib import Path
-          for rel in ("dist/github-contribution-grid-snake.svg",):
-              p = Path(rel)
+          for name in (
+              "dist/github-contribution-grid-snake.svg",
+              "dist/github-contribution-grid-snake-dark.svg",
+          ):
+              p = Path(name)
               if not p.is_file():
                   continue
               data = p.read_bytes()
@@ -49,17 +51,19 @@ jobs:
               p.write_bytes(data)
           PY
 
-      - name: Copy to assets and push
+      - name: Copy to assets, remover GIF placeholder e push
         run: |
           mkdir -p assets
-          cp -f dist/github-contribution-grid-snake.gif assets/
           cp -f dist/github-contribution-grid-snake.svg assets/
+          cp -f dist/github-contribution-grid-snake-dark.svg assets/
+          git rm -f --ignore-unmatch assets/github-contribution-grid-snake.gif
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-contribution-grid-snake.gif assets/github-contribution-grid-snake.svg
+          git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
+          git add -u assets/
           if git diff --staged --quiet; then
             echo "Sem alterações."
           else
-            git commit -m "chore(bot): atualizar cobrinha (GIF + SVG)"
+            git commit -m "chore(bot): atualizar cobrinha (SVG claro + escuro)"
             git push
           fi

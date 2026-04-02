@@ -244,7 +244,10 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 
 ## Cobra nas contribuições
 
-<img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake.gif" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake-dark.svg" />
+  <img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake.svg" width="880" height="192" />
+</picture>
 
-<sub>GIF + SVG em <code>assets/</code> — workflow <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> (Docker <a href="https://github.com/Platane/snk">Platane/snk</a>). Só contribuições <strong>públicas</strong>. <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/assets/github-contribution-grid-snake.svg">Abrir SVG</a> · Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
+<sub>SVG em <code>assets/</code> — <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> · <a href="https://github.com/Platane/snk">Platane/snk</a>. Só contribuições <strong>públicas</strong>. Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
 
