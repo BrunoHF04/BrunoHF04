@@ -12,6 +12,8 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=640&lines=Projetos+de+TI+e+automa%C3%A7%C3%A3o;IT+projects+%26+automation;IA+Generativa+no+dia+a+dia;Generative+AI+in+practice;SQL%2C+infra+e+entrega+com+qualidade;SQL%2C+infra+%26+quality+delivery" alt="Typing SVG PT / EN" />
 
+![Visitas ao perfil](https://komarev.com/ghpvc/?username=BrunoHF04&label=Visitas+ao+perfil&color=58a6ff&style=for-the-badge&labelColor=1a1b27)
+
 </div>
 
 ---
@@ -19,6 +21,8 @@
 ## Sobre mim
 
 Especialista em TI com experiência em **consultoria de projetos**, **infraestrutura** e **atendimento**. Trabalho com **IA generativa** para acelerar documentação, análises e automação. Atuo na **liderança de implantações de software** no setor notarial, com foco em integridade de dados, eficiência e inovação.
+
+> **Foco agora:** implantações em produção, documentação e automação com IA, e **dados** (SQL Server, PostgreSQL, Firebird — performance, migração e recuperação).
 
 <details>
 <summary><strong>Experiência profissional</strong> (clique para expandir)</summary>
@@ -55,7 +59,23 @@ Especialista em TI com experiência em **consultoria de projetos**, **infraestru
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Firebird](https://img.shields.io/badge/Firebird-FF0000?style=flat-square&logo=firebird&logoColor=white)
 
+<br />
+
+<img src="https://skillicons.dev/icons?i=py,docker,postgres,linux,nginx,powershell,gcp,arduino,azure&theme=dark&perline=5" alt="Ícones: Python, Docker, PostgreSQL, Linux, Nginx, PowerShell, Google Cloud, Arduino, Azure" />
+
 </div>
+
+---
+
+## Visão rápida
+
+```mermaid
+flowchart LR
+  P[Planejamento] --> I[Implantação]
+  I --> S[Suporte e dados]
+  G[IA generativa] --> P
+  G --> I
+```
 
 ---
 
@@ -105,6 +125,8 @@ Especialista em TI com experiência em **consultoria de projetos**, **infraestru
 
 IT specialist with experience in **project consulting**, **infrastructure**, and **support**. I apply **generative AI** to accelerate documentation, analysis, and automation. I **lead software rollouts** in the notarial sector, focusing on data integrity, efficiency, and innovation.
 
+> **Current focus:** production rollouts, AI-assisted documentation and automation, and **data work** (SQL Server, PostgreSQL, Firebird — performance, migration, and recovery).
+
 <details>
 <summary><strong>Professional experience</strong></summary>
 
@@ -119,7 +141,7 @@ IT specialist with experience in **project consulting**, **infrastructure**, and
 
 ### Tech stack
 
-Same toolkit as above — **AI & data** (Python, Google Cloud, Vertex AI), **Infra & DevOps** (Docker, Nginx, Linux/Ubuntu, PowerShell), and **databases** (SQL Server, PostgreSQL, Firebird).
+Same toolkit as above — **AI & data** (Python, Google Cloud, Vertex AI), **Infra & DevOps** (Docker, Nginx, Linux/Ubuntu, PowerShell), and **databases** (SQL Server, PostgreSQL, Firebird). Icon strip in the Portuguese section above.
 
 ### Featured projects
 
@@ -166,7 +188,7 @@ Open to **IT projects**, **consulting**, and **collaborations** where AI and sol
 
 ## GitHub em números
 
-Indicadores públicos via [Shields.io](https://shields.io) e sequência de contribuições — mais estáveis que o *github-readme-stats* público (Vercel), que muitas vezes responde com erro.
+Badges via [Shields.io](https://shields.io) e sequência de contribuições ([streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats)) — evitamos o *github-readme-stats* público na Vercel, que costuma falhar.
 
 <div align="center">
 
