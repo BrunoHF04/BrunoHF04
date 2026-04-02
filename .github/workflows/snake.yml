@@ -1,5 +1,5 @@
-# Gera a animação a partir do grid público de contribuições e grava em assets/ na branch main.
-# Não usa branch "output" — evita imagem partida antes da primeira execução bem-sucedida.
+# Gera animação a partir do calendário público de contribuições (API GitHub).
+# GIF no README evita erro de "Encoding" no Firefox com SVG raw; SVG fica como extra.
 name: Generate snake animation
 
 on:
@@ -18,29 +18,48 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate SVGs
-        uses: Platane/snk/svg-only@v3
+      # v3.x precisa de GITHUB_TOKEN para a API do calendário
+      - name: Generate GIF + SVG (Docker)
+        uses: Platane/snk@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      - name: Declaração XML nos SVG (melhor compatibilidade com leitores strict)
+        run: |
+          python3 << 'PY'
+          from pathlib import Path
+          for rel in ("dist/github-contribution-grid-snake.svg",):
+              p = Path(rel)
+              if not p.is_file():
+                  continue
+              data = p.read_bytes()
+              if data.startswith(b"\xef\xbb\xbf"):
+                  data = data[3:]
+              data = data.lstrip()
+              if not data.startswith(b"<?xml"):
+                  data = b'<?xml version="1.0" encoding="UTF-8"?>\n' + data
+              p.write_bytes(data)
+          PY
 
       - name: Copy to assets and push
         run: |
           mkdir -p assets
+          cp -f dist/github-contribution-grid-snake.gif assets/
           cp -f dist/github-contribution-grid-snake.svg assets/
-          cp -f dist/github-contribution-grid-snake-dark.svg assets/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
+          git add assets/github-contribution-grid-snake.gif assets/github-contribution-grid-snake.svg
           if git diff --staged --quiet; then
-            echo "Sem alterações nos SVG."
+            echo "Sem alterações."
           else
-            git commit -m "chore(bot): atualizar SVG da cobrinha"
+            git commit -m "chore(bot): atualizar cobrinha (GIF + SVG)"
             git push
           fi

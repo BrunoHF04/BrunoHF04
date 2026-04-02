@@ -244,11 +244,7 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 
 ## Cobra nas contribuições
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake.svg" />
-  <img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake-dark.svg" width="100%" />
-</picture>
+<img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake.gif" width="100%" />
 
-<sub>SVG em <code>assets/</code> na <code>main</code> — workflow <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a>. Só contribuições <strong>públicas</strong>. O <strong>README do perfil</strong> vê-se em <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a> (não em Definições → Perfil público). Actions desligadas? <strong>Settings</strong> do repo → <strong>Actions</strong> → permitir workflows.</sub>
+<sub>GIF + SVG em <code>assets/</code> — workflow <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> (Docker <a href="https://github.com/Platane/snk">Platane/snk</a>). Só contribuições <strong>públicas</strong>. <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/assets/github-contribution-grid-snake.svg">Abrir SVG</a> · Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
 
