@@ -18,6 +18,17 @@
 
 ---
 
+<details>
+<summary><strong>Atalhos</strong> — clique para abrir</summary>
+
+- [Repositórios (por última atualização)](https://github.com/BrunoHF04?tab=repositories&q=&sort=updated)  
+- [Página de contribuições / gráfico](https://github.com/BrunoHF04)  
+- [Portfólio completo](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)  
+
+</details>
+
+---
+
 ## Sobre mim
 
 Especialista em TI com experiência em **consultoria de projetos**, **infraestrutura** e **atendimento**. Trabalho com **IA generativa** para acelerar documentação, análises e automação. Atuo na **liderança de implantações de software** no setor notarial, com foco em integridade de dados, eficiência e inovação.
@@ -228,3 +239,16 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 *PT · EN — atualizado conforme o portfólio, 2026*
 
 </div>
+
+---
+
+## Cobra nas contribuições
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake.svg" />
+  <img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake-dark.svg" width="100%" />
+</picture>
+
+<sub>SVG gerado automaticamente — workflow em <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a>. Se a imagem ainda não existir: <strong>Actions</strong> → <strong>Generate snake animation</strong> → <strong>Run workflow</strong>. Só entram contribuições <strong>públicas</strong> no calendário.</sub>
+
