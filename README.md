@@ -245,10 +245,10 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 ## Cobra nas contribuições
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake.svg" />
-  <img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/github-contribution-grid-snake.svg" />
+  <img alt="Animação da cobra no calendário de contribuições do GitHub" src="assets/github-contribution-grid-snake-dark.svg" width="100%" />
 </picture>
 
-<sub>SVG gerado automaticamente — workflow em <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a>. Se a imagem ainda não existir: <strong>Actions</strong> → <strong>Generate snake animation</strong> → <strong>Run workflow</strong>. Só entram contribuições <strong>públicas</strong> no calendário.</sub>
+<sub>SVG em <code>assets/</code> na branch <code>main</code> — atualizado pelo workflow <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> (diário ou manual em <strong>Actions</strong> → <strong>Generate snake animation</strong> → <strong>Run workflow</strong>). Só entram contribuições <strong>públicas</strong>. Ativa <strong>Actions</strong> nas definições do repositório se estiverem desligadas.</sub>
 

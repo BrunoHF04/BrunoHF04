@@ -1,5 +1,5 @@
-# Gera animação "cobrinha" a partir do grid público de contribuições.
-# Publica SVGs no branch `output` (README aponta para raw.githubusercontent.com).
+# Gera a animação a partir do grid público de contribuições e grava em assets/ na branch main.
+# Não usa branch "output" — evita imagem partida antes da primeira execução bem-sucedida.
 name: Generate snake animation
 
 on:
@@ -9,8 +9,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/snake.yml"
+    paths-ignore:
+      - "assets/**"
 
 permissions:
   contents: write
@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+
       - name: Generate SVGs
         uses: Platane/snk/svg-only@v3
         with:
@@ -28,10 +30,17 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Copy to assets and push
+        run: |
+          mkdir -p assets
+          cp -f dist/github-contribution-grid-snake.svg assets/
+          cp -f dist/github-contribution-grid-snake-dark.svg assets/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
+          if git diff --staged --quiet; then
+            echo "Sem alterações nos SVG."
+          else
+            git commit -m "chore(bot): atualizar SVG da cobrinha"
+            git push
+          fi
