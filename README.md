@@ -166,24 +166,28 @@ Open to **IT projects**, **consulting**, and **collaborations** where AI and sol
 
 ## GitHub em números
 
+Indicadores públicos via [Shields.io](https://shields.io) e sequência de contribuições — mais estáveis que o *github-readme-stats* público (Vercel), que muitas vezes responde com erro.
+
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=BrunoHF04&show_icons=true&theme=tokyonight&hide_border=true&locale=pt-br" alt="Estatísticas do GitHub" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BrunoHF04&layout=compact&theme=tokyonight&hide_border=true&locale=pt-br" alt="Linguagens mais usadas" />
+[![Seguidores](https://img.shields.io/github/followers/BrunoHF04?style=for-the-badge&logo=github&logoColor=white&label=Seguidores&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04?tab=followers)
+[![Estrelas nos repositórios](https://img.shields.io/github/stars/BrunoHF04?affiliations=OWNER&style=for-the-badge&logo=github&logoColor=white&label=Estrelas%20%28repos%29&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04?tab=repositories&q=&sort=stargazers)
+[![Perfil](https://img.shields.io/badge/Ver%20atividade-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BrunoHF04)
 
-<img src="https://github-readme-streak-stats.demolab.com/?user=BrunoHF04&theme=tokyonight&hide_border=true&locale=pt-br" alt="Sequência de contribuições" />
+<img src="https://streak-stats.demolab.com/?user=BrunoHF04&theme=tokyonight&hide_border=true&locale=pt-br&short_numbers=true" alt="Sequência de contribuições no GitHub" />
 
 </div>
 
 <details>
-<summary>GitHub stats in English</summary>
+<summary><strong>English</strong> — same metrics, English labels</summary>
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=BrunoHF04&show_icons=true&theme=tokyonight&hide_border=true&locale=en" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BrunoHF04&layout=compact&theme=tokyonight&hide_border=true&locale=en" alt="Top languages" />
+[![Followers](https://img.shields.io/github/followers/BrunoHF04?style=for-the-badge&logo=github&logoColor=white&label=Followers&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04?tab=followers)
+[![Stars on repos](https://img.shields.io/github/stars/BrunoHF04?affiliations=OWNER&style=for-the-badge&logo=github&logoColor=white&label=Stars%20%28repos%29&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04?tab=repositories&q=&sort=stargazers)
+[![Profile](https://img.shields.io/badge/View%20activity-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BrunoHF04)
 
-<img src="https://github-readme-streak-stats.demolab.com/?user=BrunoHF04&theme=tokyonight&hide_border=true&locale=en" alt="Contribution streak" />
+<img src="https://streak-stats.demolab.com/?user=BrunoHF04&theme=tokyonight&hide_border=true&locale=en&short_numbers=true" alt="GitHub contribution streak" />
 
 </div>
 
