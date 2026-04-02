@@ -9,6 +9,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-121212?style=for-the-badge&logo=githubpages&logoColor=white)](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)
 [![Email](https://img.shields.io/badge/Email-fernandesb428%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fernandesb428@gmail.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-(16)%209%209113--3339-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5516991133339)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Bruno_Fernandes-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fernandes)
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=640&lines=Projetos+de+TI+e+automa%C3%A7%C3%A3o;IT+projects+%26+automation;IA+Generativa+no+dia+a+dia;Generative+AI+in+practice;SQL%2C+infra+e+entrega+com+qualidade;SQL%2C+infra+%26+quality+delivery" alt="Typing SVG PT / EN" />
 
@@ -26,6 +27,7 @@
 - [Repositórios (por última atualização)](https://github.com/BrunoHF04?tab=repositories&q=&sort=updated)  
 - [Página de contribuições / gráfico](https://github.com/BrunoHF04)  
 - [Portfólio completo](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)  
+- [LinkedIn](https://www.linkedin.com/in/bruno-fernandes)  
 
 </details>
 
@@ -40,7 +42,7 @@ Dica: **fixa até 6 repositórios** em [github.com/BrunoHF04](https://github.com
 | Repositório | Sobre |
 |:--|:--|
 | [**Portfolio-Bruno_Fernandes**](https://github.com/BrunoHF04/Portfolio-Bruno_Fernandes) · [![estrelas](https://img.shields.io/github/stars/BrunoHF04/Portfolio-Bruno_Fernandes?style=flat-square&logo=github&logoColor=white&label=&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04/Portfolio-Bruno_Fernandes) | Site do portfólio (GitHub Pages) |
-| [**Clothing_System**](https://github.com/BrunoHF04/Clothing_System) · [![estrelas](https://img.shields.io/github/stars/BrunoHF04/Clothing_System?style=flat-square&logo=github&logoColor=white&label=&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04/Clothing_System) | Projeto de sistema (código no GitHub) |
+| [**Clothing_System**](https://github.com/BrunoHF04/Clothing_System) · [![estrelas](https://img.shields.io/github/stars/BrunoHF04/Clothing_System?style=flat-square&logo=github&logoColor=white&label=&labelColor=1a1b27&color=58a6ff)](https://github.com/BrunoHF04/Clothing_System) | ERP *fashion* local — API **Go**, **PostgreSQL** e frontend **TypeScript** |
 
 [**Ver todos os repositórios →**](https://github.com/BrunoHF04?tab=repositories&q=&sort=updated)
 
@@ -222,6 +224,7 @@ Full case details, testimonials, and education: **[brunohf04.github.io/Portfolio
 Open to **IT projects**, **consulting**, and **collaborations** where AI and solid processes drive impact.
 
 [![Resume / Portfolio](https://img.shields.io/badge/Resume_%2F_Portfolio-24292F?style=for-the-badge&logo=githubpages&logoColor=white)](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fernandes)
 
 </details>
 
@@ -265,6 +268,7 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 <div align="center">
 
 [![Download CV](https://img.shields.io/badge/Download_CV-24292F?style=for-the-badge&logo=github&logoColor=white)](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fernandes)
 
 *PT · EN — atualizado conforme o portfólio, 2026*
 
