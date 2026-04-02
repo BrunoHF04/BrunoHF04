@@ -285,3 +285,96 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
 
 <sub>SVG em <code>assets/</code> — <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> · <a href="https://github.com/Platane/snk">Platane/snk</a>. Só contribuições <strong>públicas</strong>. Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
 
+---
+
+## Mini-jogo — *missão deploy*
+
+*Sem JavaScript no GitHub: é só ir abrindo as escolhas (`details`). Inspirado em noites de TI.*
+
+<details>
+<summary><strong>Começar</strong> — sexta, 22:47. O ambiente de homologação caiu. E agora?</summary>
+
+<details>
+<summary>Ver logs e métricas antes de qualquer coisa</summary>
+
+Boa. Achas um pico de **consultas lentas** no PostgreSQL. Próximo passo?
+
+<details>
+<summary>Correr <code>EXPLAIN ANALYZE</code> e rever índices</summary>
+
+**Vitória** — caminho de quem não chuta. Se isto te parece trabalho do dia a dia, [vamos conversar](mailto:fernandesb428@gmail.com) ou vê o [portfólio](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/).
+
+</details>
+
+<details>
+<summary>Escalar a VM para o dobro “para ver se resolve”</summary>
+
+Às vezes ajuda — mas sem diagnóstico é lotaria. Volta atrás e tenta a outra opção.
+
+</details>
+
+</details>
+
+<details>
+<summary>Reiniciar tudo e ir buscar café</summary>
+
+O café é sagrado — mas o bug ainda vai estar lá. Tenta outra abordagem no **Começar**.
+
+</details>
+
+<details>
+<summary>Pedir à IA: “corrija o servidor” sem colar erro nem contexto</summary>
+
+A IA também precisa de dados. Volta ao **Começar** com mais método.
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>English</strong> — same mini-game</summary>
+
+<details>
+<summary><strong>Start</strong> — Friday, 10:47 PM. Staging is down. What do you do?</summary>
+
+<details>
+<summary>Check logs and metrics first</summary>
+
+Smart. You spot **slow queries** in PostgreSQL. Next?
+
+<details>
+<summary>Run <code>EXPLAIN ANALYZE</code> and review indexes</summary>
+
+**You win** — the boring, right way. [Get in touch](mailto:fernandesb428@gmail.com) or see the [portfolio](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/).
+
+</details>
+
+<details>
+<summary>Double the VM size “and see”</summary>
+
+Might work — might hide the real issue. Go back and pick the other path.
+
+</details>
+
+</details>
+
+<details>
+<summary>Restart everything and grab coffee</summary>
+
+Coffee is valid — the bug won’t fix itself. Try **Start** again.
+
+</details>
+
+<details>
+<summary>Ask AI to “fix the server” with no logs or context</summary>
+
+Even AI needs inputs. Back to **Start**.
+
+</details>
+
+</details>
+
+</details>
+
+<sub>Queres um jogo com gráficos e teclado? Hospeda em <a href="https://brunohf04.github.io/Portfolio-Bruno_Fernandes/">GitHub Pages</a> no portfólio e deixa aqui só um link — o README não executa JavaScript.</sub>
+
