@@ -1,13 +1,25 @@
 # GitHub Pages (`/docs`)
 
-Este diretório publica jogos e páginas estáticas em:
+URL do site: **`https://brunohf04.github.io/BrunoHF04/`**  
+Tetris: **`https://brunohf04.github.io/BrunoHF04/tetris.html`**
 
-**`https://brunohf04.github.io/BrunoHF04/`**
+## Se aparece **404** — ativa o Pages (uma vez)
 
-## Ativar (uma vez)
+### Opção A — GitHub Actions (recomendado)
 
-1. No repositório **BrunoHF04** → **Settings** → **Pages**
-2. **Build and deployment** → Source: **Deploy from a branch**
-3. Branch: **main** · Folder: **`/docs`** → **Save**
+Este repo inclui [`.github/workflows/deploy-pages.yml`](../.github/workflows/deploy-pages.yml), que envia a pasta `docs/` para o Pages.
 
-Após o deploy (1–2 min), abre [tetris.html](tetris.html) ou a [raiz do site](https://brunohf04.github.io/BrunoHF04/).
+1. Abre **https://github.com/BrunoHF04/BrunoHF04/settings/pages**
+2. Em **Build and deployment** → **Source**, escolhe **GitHub Actions** (não “Deploy from a branch”).
+3. Vai a **Actions** → workflow **Deploy GitHub Pages** → **Run workflow** (ou faz um push em `main`).
+4. Espera o job ficar verde; recarrega o Tetris após ~1 min.
+
+### Opção B — Branch + pasta `/docs` (clássico)
+
+1. **Settings** → **Pages**
+2. **Source**: **Deploy from a branch**
+3. Branch **main**, pasta **`/docs`** → **Save**
+
+---
+
+**Nota:** Sem um destes passos, o GitHub **não publica** o site — daí a mensagem *“There isn't a GitHub Pages site here”*.

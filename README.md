@@ -389,7 +389,7 @@ O README **não executa JavaScript**. O **Tetris** abaixo corre em **GitHub Page
 
 </div>
 
-**Primeira vez?** Ativa Pages: *Settings* → *Pages* → branch **main**, pasta **`/docs`** → *Save* (instruções em [`docs/README.md`](docs/README.md)).
+**Vês 404?** O site só existe depois de ativares o Pages: *Settings* → *Pages* → **Source: GitHub Actions** (recomendado; este repo já tem [workflow](https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/deploy-pages.yml)) **ou** branch **main** + pasta **`/docs`**. Depois corre o workflow em *Actions* ou espera o push. Passo a passo: [`docs/README.md`](docs/README.md).
 
 **Doom / Super Mario** no browser usam emulação + megabytes de assets; não cabem “dentro” do perfil. Demos públicas para linkares se quiseres:
 
