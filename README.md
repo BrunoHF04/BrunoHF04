@@ -376,5 +376,27 @@ Even AI needs inputs. Back to **Start**.
 
 </details>
 
-<sub>Queres um jogo com gráficos e teclado? Hospeda em <a href="https://brunohf04.github.io/Portfolio-Bruno_Fernandes/">GitHub Pages</a> no portfólio e deixa aqui só um link — o README não executa JavaScript.</sub>
+---
+
+## Arcade — jogo de verdade (teclado)
+
+O README **não executa JavaScript**. O **Tetris** abaixo corre em **GitHub Pages** neste mesmo repositório (`/docs`).
+
+<div align="center">
+
+[![Jogar Tetris](https://img.shields.io/badge/▶_Jogar_Tetris-238636?style=for-the-badge)](https://brunohf04.github.io/BrunoHF04/tetris.html)
+[![Índice arcade](https://img.shields.io/badge/Arcade-121212?style=for-the-badge&logo=github&logoColor=white)](https://brunohf04.github.io/BrunoHF04/)
+
+</div>
+
+**Primeira vez?** Ativa Pages: *Settings* → *Pages* → branch **main**, pasta **`/docs`** → *Save* (instruções em [`docs/README.md`](docs/README.md)).
+
+**Doom / Super Mario** no browser usam emulação + megabytes de assets; não cabem “dentro” do perfil. Demos públicas para linkares se quiseres:
+
+- [DOS Zone](https://dos.zone/) — clássicos MS-DOS no browser  
+- [Internet Archive · Software](https://archive.org/details/softwarelibrary_msdos_games) — coleção histórica  
+
+---
+
+<sub>Mini-jogo em texto (acima) continua disponível sem Pages.</sub>
 

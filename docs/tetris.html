@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Tetris — BrunoHF04</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --grid: #21262d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      touch-action: manipulation;
+    }
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      letter-spacing: 0.04em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      max-width: 28rem;
+    }
+    .sub a { color: var(--accent); }
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    #board {
+      display: grid;
+      grid-template-rows: repeat(20, 1fr);
+      grid-template-columns: repeat(10, 1fr);
+      gap: 1px;
+      background: var(--grid);
+      padding: 2px;
+      border-radius: 8px;
+      width: min(300px, 90vw);
+      aspect-ratio: 10 / 20;
+    }
+    .cell {
+      background: var(--panel);
+      border-radius: 2px;
+    }
+    .cell.filled { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
+    aside {
+      background: var(--panel);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--grid);
+      min-width: 140px;
+    }
+    aside h2 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .score { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    #next {
+      display: grid;
+      grid-template-columns: repeat(4, 12px);
+      grid-template-rows: repeat(4, 12px);
+      gap: 1px;
+      margin-top: 0.5rem;
+    }
+    #next .c { width: 12px; height: 12px; border-radius: 2px; background: var(--bg); }
+    #next .c.on { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1); }
+    .keys {
+      font-size: 0.65rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+    .keys kbd {
+      background: var(--bg);
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid var(--grid);
+    }
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    button {
+      font: inherit;
+      font-size: 0.7rem;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--grid);
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--accent); color: var(--accent); }
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(13,17,23,0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    #overlay.hidden { display: none; }
+    .modal {
+      text-align: center;
+      padding: 2rem;
+      max-width: 320px;
+    }
+    .modal h2 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <h1>Tetris</h1>
+  <p class="sub">Jogo real com teclado/toque. Criado para o perfil <a href="https://github.com/BrunoHF04">BrunoHF04</a> (GitHub Pages).</p>
+  <div class="wrap">
+    <div id="board"></div>
+    <aside>
+      <h2>Pontos</h2>
+      <div class="score" id="score">0</div>
+      <h2>Nível</h2>
+      <div class="score" id="level">1</div>
+      <h2>Próxima</h2>
+      <div id="next"></div>
+      <div class="keys">
+        <kbd>←</kbd><kbd>→</kbd> mover<br />
+        <kbd>↑</kbd> rodar<br />
+        <kbd>↓</kbd> queda rápida<br />
+        <kbd>Espaço</kbd> soltar
+      </div>
+      <div class="btns">
+        <button type="button" id="btnL">←</button>
+        <button type="button" id="btnR">→</button>
+        <button type="button" id="btnRot">↻</button>
+        <button type="button" id="btnDown">↓</button>
+        <button type="button" id="btnDrop">⤓</button>
+        <button type="button" id="btnPause">Pausa</button>
+      </div>
+    </aside>
+  </div>
+
+  <div id="overlay">
+    <div class="modal">
+      <h2>Tetris</h2>
+      <p>← → mover · ↑ rodar · ↓ rápido · Espaço soltar</p>
+      <button type="button" id="startBtn">Começar</button>
+    </div>
+  </div>
+
+  <script>
+(function () {
+  const COLS = 10, ROWS = 20;
+  const COLORS = {
+    I: "#79c0ff", O: "#d2a8ff", T: "#a371f7", S: "#3fb950", Z: "#ff7b72",
+    J: "#58a6ff", L: "#ffa657"
+  };
+  const SHAPES = {
+    I: [[1,1,1,1]],
+    O: [[1,1],[1,1]],
+    T: [[0,1,0],[1,1,1]],
+    S: [[0,1,1],[1,1,0]],
+    Z: [[1,1,0],[0,1,1]],
+    J: [[1,0,0],[1,1,1]],
+    L: [[0,0,1],[1,1,1]]
+  };
+  const KEYS = "IOTSZJL";
+
+  let grid = [];
+  let current = null;
+  let nextType = KEYS[Math.floor(Math.random() * 7)];
+  let score = 0, level = 1, lines = 0;
+  let tick = null;
+  let paused = false;
+  let gameOver = false;
+
+  const boardEl = document.getElementById("board");
+  const nextEl = document.getElementById("next");
+  const scoreEl = document.getElementById("score");
+  const levelEl = document.getElementById("level");
+  const overlay = document.getElementById("overlay");
+
+  function emptyGrid() {
+    grid = Array.from({ length: ROWS }, () => Array(COLS).fill(null));
+  }
+
+  function buildBoardDOM() {
+    boardEl.innerHTML = "";
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const d = document.createElement("div");
+        d.className = "cell";
+        d.dataset.r = r;
+        d.dataset.c = c;
+        boardEl.appendChild(d);
+      }
+    }
+  }
+
+  function pieceFromType(t) {
+    const m = SHAPES[t].map(row => row.slice());
+    return { type: t, matrix: m, x: Math.floor((COLS - m[0].length) / 2), y: 0 };
+  }
+
+  function rotate(m) {
+    const h = m.length, w = m[0].length;
+    const out = Array.from({ length: w }, () => Array(h).fill(0));
+    for (let r = 0; r < h; r++)
+      for (let c = 0; c < w; c++)
+        out[c][h - 1 - r] = m[r][c];
+    return out;
+  }
+
+  function valid(p, dx, dy, mat) {
+    const m = mat || p.matrix;
+    for (let r = 0; r < m.length; r++)
+      for (let c = 0; c < m[r].length; c++) {
+        if (!m[r][c]) continue;
+        const nr = p.y + r + dy, nc = p.x + c + dx;
+        if (nc < 0 || nc >= COLS || nr >= ROWS) return false;
+        if (nr >= 0 && grid[nr][nc]) return false;
+      }
+    return true;
+  }
+
+  function merge() {
+    const m = current.matrix;
+    for (let r = 0; r < m.length; r++)
+      for (let c = 0; c < m[r].length; c++)
+        if (m[r][c] && current.y + r >= 0)
+          grid[current.y + r][current.x + c] = current.type;
+  }
+
+  function clearLines() {
+    let cleared = 0;
+    for (let r = ROWS - 1; r >= 0; r--) {
+      if (grid[r].every(Boolean)) {
+        grid.splice(r, 1);
+        grid.unshift(Array(COLS).fill(null));
+        cleared++;
+        r++;
+      }
+    }
+    if (cleared) {
+      const pts = [0, 100, 300, 500, 800];
+      score += pts[cleared] * level;
+      lines += cleared;
+      const newLevel = 1 + Math.floor(lines / 10);
+      if (newLevel !== level) {
+        level = newLevel;
+        restartTick();
+      }
+      scoreEl.textContent = score;
+      levelEl.textContent = level;
+    }
+  }
+
+  function restartTick() {
+    clearInterval(tick);
+    const ms = Math.max(120, 800 - (level - 1) * 60);
+    tick = setInterval(dropStep, ms);
+  }
+
+  function spawn() {
+    current = pieceFromType(nextType);
+    nextType = KEYS[Math.floor(Math.random() * 7)];
+    if (!valid(current, 0, 0, current.matrix)) {
+      gameOver = true;
+      clearInterval(tick);
+      overlay.querySelector(".modal").innerHTML = "<h2>Fim de jogo</h2><p>Pontos: " + score + "</p><button type='button' id='againBtn'>De novo</button>";
+      overlay.classList.remove("hidden");
+      document.getElementById("againBtn").onclick = () => location.reload();
+      return false;
+    }
+    drawNext();
+    return true;
+  }
+
+  function drawNext() {
+    nextEl.innerHTML = "";
+    const m = SHAPES[nextType];
+    const pad = 4;
+    for (let r = 0; r < pad; r++) {
+      for (let c = 0; c < pad; c++) {
+        const el = document.createElement("div");
+        el.className = "c";
+        if (r < m.length && c < m[r].length && m[r][c]) {
+          el.classList.add("on");
+          el.style.background = COLORS[nextType];
+        }
+        nextEl.appendChild(el);
+      }
+    }
+  }
+
+  function paint() {
+    const cells = boardEl.querySelectorAll(".cell");
+    cells.forEach(el => {
+      el.classList.remove("filled");
+      el.style.background = "";
+    });
+    for (let r = 0; r < ROWS; r++)
+      for (let c = 0; c < COLS; c++) {
+        const i = r * COLS + c;
+        if (grid[r][c]) {
+          cells[i].classList.add("filled");
+          cells[i].style.background = COLORS[grid[r][c]];
+        }
+      }
+    if (current) {
+      const m = current.matrix;
+      for (let r = 0; r < m.length; r++)
+        for (let c = 0; c < m[r].length; c++) {
+          if (!m[r][c]) continue;
+          const nr = current.y + r, nc = current.x + c;
+          if (nr >= 0) {
+            const i = nr * COLS + nc;
+            cells[i].classList.add("filled");
+            cells[i].style.background = COLORS[current.type];
+          }
+        }
+    }
+  }
+
+  function dropStep() {
+    if (paused || gameOver || !current) return;
+    if (valid(current, 0, 1, current.matrix)) current.y++;
+    else {
+      merge();
+      clearLines();
+      if (!spawn()) return;
+    }
+    paint();
+  }
+
+  function hardDrop() {
+    if (paused || gameOver) return;
+    while (valid(current, 0, 1, current.matrix)) current.y++;
+    merge();
+    clearLines();
+    spawn();
+    paint();
+  }
+
+  function startGame() {
+    overlay.classList.add("hidden");
+    emptyGrid();
+    buildBoardDOM();
+    score = 0; level = 1; lines = 0;
+    scoreEl.textContent = "0";
+    levelEl.textContent = "1";
+    gameOver = false;
+    paused = false;
+    current = null;
+    nextType = KEYS[Math.floor(Math.random() * 7)];
+    spawn();
+    paint();
+    restartTick();
+  }
+
+  document.getElementById("startBtn").onclick = startGame;
+
+  document.addEventListener("keydown", (e) => {
+    if (gameOver) return;
+    if (overlay && !overlay.classList.contains("hidden") && e.code !== "Enter") return;
+    if (e.code === "KeyP") {
+      paused = !paused;
+      return;
+    }
+    if (paused) return;
+    if (!current) return;
+    if (e.code === "ArrowLeft" && valid(current, -1, 0, current.matrix)) { current.x--; paint(); }
+    else if (e.code === "ArrowRight" && valid(current, 1, 0, current.matrix)) { current.x++; paint(); }
+    else if (e.code === "ArrowDown" && valid(current, 0, 1, current.matrix)) { current.y++; score += 1; scoreEl.textContent = score; paint(); }
+    else if (e.code === "ArrowUp") {
+      const rot = rotate(current.matrix);
+      if (valid({ ...current, matrix: rot }, 0, 0, rot)) { current.matrix = rot; paint(); }
+    }
+    else if (e.code === "Space") { e.preventDefault(); hardDrop(); }
+  });
+
+  document.getElementById("btnL").onclick = () => { if (!paused && current && valid(current, -1, 0, current.matrix)) { current.x--; paint(); } };
+  document.getElementById("btnR").onclick = () => { if (!paused && current && valid(current, 1, 0, current.matrix)) { current.x++; paint(); } };
+  document.getElementById("btnDown").onclick = () => { if (!paused && current && valid(current, 0, 1, current.matrix)) { current.y++; score++; scoreEl.textContent = score; paint(); } };
+  document.getElementById("btnRot").onclick = () => {
+    if (!paused && current) {
+      const rot = rotate(current.matrix);
+      if (valid({ ...current, matrix: rot }, 0, 0, rot)) { current.matrix = rot; paint(); }
+    }
+  };
+  document.getElementById("btnDrop").onclick = () => hardDrop();
+  document.getElementById("btnPause").onclick = () => { paused = !paused; };
+})();
+  </script>
+</body>
+</html>
