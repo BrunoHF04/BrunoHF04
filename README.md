@@ -283,7 +283,7 @@ Aberto a **projetos de TI**, **consultoria** e **colaborações** onde IA e proc
   <img alt="Animação da cobra no calendário de contribuições do GitHub" src="https://raw.githubusercontent.com/BrunoHF04/BrunoHF04/main/assets/github-contribution-grid-snake.svg" width="880" height="192" />
 </picture>
 
-<sub>SVG em <code>assets/</code> — <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> · <a href="https://github.com/Platane/snk">Platane/snk</a>. Só contribuições <strong>públicas</strong>. Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
+<sub>SVG em <code>assets/</code> — <a href="https://github.com/BrunoHF04/BrunoHF04/blob/main/.github/workflows/snake.yml"><code>snake.yml</code></a> · <a href="https://github.com/Platane/snk">Platane/snk</a>. Perfil: <a href="https://github.com/BrunoHF04">github.com/BrunoHF04</a></sub>
 
 ---
 
