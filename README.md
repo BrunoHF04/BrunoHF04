@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bruno Henrique Fernandes
+# Bruno Fernandes
 
 **Gestor de Projetos de TI & Especialista em IA** · *IT Project Manager & AI Specialist*
 
