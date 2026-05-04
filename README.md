@@ -196,7 +196,7 @@ Same toolkit as above — **AI & data** (Python, Google Cloud, Vertex AI), **Inf
 | **Overtime bank management** | PHP/SQL · dashboards | [Portfolio](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/) |
 | **Smart rationing monitor** | Hardware · Arduino · CONIC-SEMESP award | [Portfolio](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/) |
 
-Full case details, testimonials, and education: **[brunohf04.github.io/Portfolio-Bruno_Fernandes](https://brunohf04.github.io/Portfolio-Bruno_Fernandes/)**
+Full case details, testimonials, and education: **[bruno-fernandes.online](https://bruno-fernandes.online/)**
 
 <details>
 <summary><strong>Education</strong></summary>
